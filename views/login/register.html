@@ -1,19 +1,48 @@
-<section class="card register">
-  <form name="myform">
+<section class="registerGym">
+	<form name="formGym"
+	ng-submit="register()"
+	novalidate>
 
-    <div class="textintro">
-      <h1>Register</h1>
-      <p>To access site features</p>
-    </div>
+		<div class="textintro">
+			<h1 > ברוכים הבאים ל ספיס גים</h1>
 
-    <fieldset>
-      <input type="text" name="firstname" placeholder="First Name">
-      <input type="text" name="lastname" placeholder="Last Name">
-      <input type="email" name="email" placeholder="Email">
-      <input type="password" name="password" placeholder="Password">
-    </fieldset>
+			<h2> הרשמה</h2>
+			{{message}}
+		</div>
 
-    <button type="submit" class="btn">Register</button>
-    <p>or <a href="#/login">login</a></p>
-  </form>
+		<fieldset>
+			<input type="text" name="firstname" placeholder="שם פרטי" ng-model="firstName" ng-required="true">
+			<p class="error validationerror"
+			ng-show="formGym.firstname.$invalid && formGym.firstname.$touched">
+				חובה לרשום שם פרטי
+			</p>
+
+			<input type="text" name="lastName" placeholder="שם משפחה" ng-model="lastName" ng-required="true">
+			<p class="error validationerror"
+			ng-show="formGym.lastName.$invalid && formGym.lastName.$touched">
+				חובה לרשום שם משפחה
+			</p>
+
+			<input type="email" name="email" placeholder="מייל" ng-model="user.email"
+			ng-required="true">
+			<p class="error validationerror"
+			ng-show="formGym.email.$invalid && formGym.email.$touched">
+				נא להקליד אימייל נכון
+			</p>
+
+			<input type="password" name="password" placeholder="סיסמה" ng-model="password" ng-required="true">
+			<p class="error validationerror"
+			ng-show="formGym.password.$invalid && formGym.password.$touched">
+				נא להקליד סיסמה
+			</p>
+		</fieldset>
+		<div class="btnsLogin">
+			<button type="submit"  ng-disabled="formGym.$invalid"  class="btn btn-primary btn-lg"> 
+				Register
+			</button>
+			<p>
+				<a ng-href="#/login"  class="btn btn-secondary btn-lg">login</a>
+			</p>
+		</div>
+	</form>
 </section>
