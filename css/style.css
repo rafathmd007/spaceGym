@@ -1,8 +1,9 @@
 body{
 	
 	direction: rtl;
-	    background: url("../img/login.jpg") no-repeat;
+/**    background: url("../img/login.jpg") no-repeat;**/
     background-size: 100% 100%;
+    font-size: 16px;
 }
 
 .login {
@@ -10,16 +11,72 @@ body{
 	float: right;
 }
 .login input{
-	margin:5% auto;
-	display: block;
+	    margin: 2% auto;
+    display: block;
+    width: 50%;
+        height: 35px;
+	  
 }
-.loginBtnsdDiv{
-	    margin: 0 auto;
-    width: 16%;
+.textintro h1{
+	text-align: center;
+	    color: salmon;
+    font-size: 2.5em;
+      
 }
-.loginBtnsdDiv .btn{
-	display: inline-block !important;
+.textintro h2 {
+	text-align: center;
+	    font-size: 2em;
+    color: rgba(200, 19, 19, 0.8);
+	
 }
+.btnsLogin{
+	text-align: center;
+}
+input.ng-invalid.ng-touched{
+	
+	border: 1.5px solid #DA3637;
+}
+input.ng-valid.ng-touched{
+	
+	border: 1.5px solid #509D12;
+	
+}
+.validationerror{
+	 color: #DA3637;
+	 text-align: center;
+	
+}
+input:focus{
+
+    outline: none;
+}
+/**nav html**/
+.branding{
+	    float: left;
+    font-size: 2em;
+  
+}
+
+.branding a{
+	color:gray;
+	text-align: none;
+	  background: url("../img/logo2.png") no-repeat;
+	     width: 148px;
+    height: 64px;
+    display: block;
+}
+.upNav {
+	list-style-type: none
+}
+.upNav li{
+	float: right;
+}
+.upNav li a {
+	    margin-left: 10px;
+    font-size: 1.2em;
+}
+/** **/
+
 
 
 

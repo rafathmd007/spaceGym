@@ -1,10 +1,18 @@
 (function (){
 	
-	userLogin.controller('registrationController',registration);
+angular.module("spaceGym").controller("registrationController",registration);
 
 function registration ($scope) {
   
-  $scope.massege="wellcome";
+ $scope.login=function(){
+ 	
+ 	$scope.message="welcome" +$scope.user.email;
+ };
+ 
+ $scope.register=function (){
+ 	
+ 	$scope.message="welcome" + " "+ $scope.user.email;
+ };
 }
 	
 	

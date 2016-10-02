@@ -1,18 +1,27 @@
-<section class="card login">
-  <form name="myform"
+<section class="loginGym">
+  <form name="formGym"
+  ng-submit="login()"
     novalidate>
 
     <div class="textintro">
     
-      {{massege}}
+ <h1>  ברוכים הבאים ל ספיס גים</h1>
+ <h2> כניסה</h2>
+ <p ng-show="message"> {{message}}</p>
+ 
     </div>
-
+ 
     <fieldset>
-      <input type="email" name="email" placeholder="Email">
-      <input type="password" name="password" placeholder="Password">
+      <input type="email"  name ="email" placeholder="מייל" ng-model="user.email" ng-required="true">
+      <p class="error validationerror"
+      ng-show="formGym.email.$invalid && formGym.email.$touched"> חובה לרשום אימייל חוקי</p>
+      <input type="password" name="password" placeholder="סיסמה" ng-model="password" ng-model="user.password" ng-required="true">
+        <p class="error validationerror"
+      ng-show="formGym.password.$invalid && formGym.password.$touched"> חובה לרשום סיסמה</p>
     </fieldset>
-
-    <button type="submit" class="btn">Login</button>
-    <p>or <a href="#/register">register</a></p>
+<div class="btnsLogin">
+    <button type="submit" class="btn btn-primary btn-lg" ng-disabled="formGym.$invalid">Login</button>
+    <p><a ng-href="#/register" class="btn btn-secondary btn-lg">register</a></p>
+    </div>
   </form>
 </section>
