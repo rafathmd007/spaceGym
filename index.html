@@ -4,20 +4,35 @@
 <html ng-app="spaceGym">
 	
 	<head>
-		
+		<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>space gym</title>
 		
 		<!-- style-->
 		<link rel="stylesheet" href="css/style.css" />
+		<!-- bootstrap-->
+		<link href="js/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+		<script src="js/node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="js/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- controllers-->
+		<!--controllerLogin-->
+		<script src="app/controllers/login/userLoginMain.js"></script>
+		<script src="app/controllers/login/registration.js"></script>
 		
 		
 	</head>
 	
 	<body>
 		
+	<div class="login">
+ <div ng-view></div>
+</div>
+		
+		
 		
 		<!-- angular -->
-		<script src="js/angular.min.js"></script>
+		<script src="js/node_modules/angular/angular.min.js"</script>
+			<script src="/node_modules/angular/angular-route.min.js"></script>
 		<!--config -->
 		<script src="app/config.js"></script>
 	</body>

@@ -1,6 +1,6 @@
 (function (){
 	
-angular.module("spaceGym",[]);	
+angular.module("spaceGym",['ngRoute']);	
 	
 	
 })();

@@ -1,0 +1,25 @@
+body{
+	
+	direction: rtl;
+	    background: url("../img/login.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.login {
+	width:100%;
+	float: right;
+}
+.login input{
+	margin:5% auto;
+	display: block;
+}
+.loginBtnsdDiv{
+	    margin: 0 auto;
+    width: 16%;
+}
+.loginBtnsdDiv .btn{
+	display: inline-block !important;
+}
+
+
+
